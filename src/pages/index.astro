@@ -29,9 +29,10 @@ import Layout from '../layouts/Layout.astro';
           <p class="org-tagline">Fundacja Ratownictwa Motocyklowego</p>
         </div>
 
-        <p class="bio reveal-item">
-          Thunder Rescue to fundacja ratownictwa motocyklowego, której misją jest niesienie pomocy oraz promowanie bezpieczeństwa. Tworzymy zespół ludzi z pasją, którzy nieustannie rozwijają swoje umiejętności, aby skutecznie wspierać osoby potrzebujące pomocy.<span class="bio-p2"> Zajmujemy się zabezpieczeniami medycznymi imprez masowych, wydarzeń sportowych i kulturalnych oraz prowadzimy szkolenia z zakresu pierwszej pomocy. Działamy z zaangażowaniem, profesjonalizmem i gotowością do niesienia pomocy tam, gdzie jest ona najbardziej potrzebna.</span>
-        </p>
+        <div class="bio reveal-item">
+          <p>Thunder Rescue to fundacja ratownictwa motocyklowego, której misją jest niesienie pomocy oraz promowanie bezpieczeństwa. Tworzymy zespół ludzi z pasją, którzy nieustannie rozwijają swoje umiejętności, aby skutecznie wspierać osoby potrzebujące pomocy.</p>
+          <p class="bio-p2">Zajmujemy się zabezpieczeniami medycznymi imprez masowych, wydarzeń sportowych i kulturalnych oraz prowadzimy szkolenia z zakresu pierwszej pomocy. Działamy z zaangażowaniem, profesjonalizmem i gotowością do niesienia pomocy tam, gdzie jest ona najbardziej potrzebna.</p>
+        </div>
 
       </div>
 
@@ -62,9 +63,14 @@ import Layout from '../layouts/Layout.astro';
               <span>Twitter / X</span>
             </a>
 
-            <a href="https://www.youtube.com/@Thunder_Rescue" target="_blank" rel="noopener noreferrer" class="link-card link-card--wide" aria-label="YouTube">
+            <a href="https://www.youtube.com/@Thunder_Rescue" target="_blank" rel="noopener noreferrer" class="link-card" aria-label="YouTube">
               <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
               <span>YouTube</span>
+            </a>
+
+            <a href="https://patreon.com/ThunderRescue" target="_blank" rel="noopener noreferrer" class="link-card" aria-label="Patreon">
+              <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14.82 2.41C11.55 2.41 8.9 5.07 8.9 8.34c0 3.26 2.65 5.92 5.92 5.92 3.26 0 5.92-2.66 5.92-5.92 0-3.27-2.66-5.93-5.92-5.93zM3.18 21.6h3.09V2.41H3.18V21.6z"/></svg>
+              <span>Patreon</span>
             </a>
 
           </div>
@@ -268,6 +274,9 @@ import Layout from '../layouts/Layout.astro';
     color: #cbd5e1;
     margin-bottom: 28px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
   }
 
   /* ── Section label ── */
@@ -372,11 +381,11 @@ import Layout from '../layouts/Layout.astro';
 
   .contact-card {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 16px 10px;
+    gap: 10px;
+    padding: 14px 12px;
     background: rgba(22, 163, 74, 0.12);
     border: 1px solid rgba(22, 163, 74, 0.3);
     border-radius: 12px;
@@ -385,8 +394,9 @@ import Layout from '../layouts/Layout.astro';
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
-    word-break: break-all;
-    text-align: center;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    text-align: left;
   }
 
   .contact-card:hover {
@@ -464,9 +474,14 @@ import Layout from '../layouts/Layout.astro';
       text-align: left;
     }
 
-    /* On desktop hide the second sentence to keep it compact */
+    /* On desktop hide the second paragraph to keep it compact */
     .bio-p2 {
       display: none;
+    }
+
+    .bio {
+      text-align: left;
+      gap: 0;
     }
 
     .section-label::after {
@@ -519,12 +534,20 @@ import Layout from '../layouts/Layout.astro';
       font-size: 26px;
     }
 
+    /* Bigger, separated paragraphs for easy reading */
+    .bio {
+      font-size: 14.5px;
+      line-height: 1.75;
+      gap: 16px;
+    }
+
     .social-grid {
       grid-template-columns: 1fr 1fr;
     }
 
-    .link-card--wide {
-      grid-column: 1 / -1;
+    /* Contact as single column so email has full width */
+    .contact-grid {
+      grid-template-columns: 1fr;
     }
   }
 

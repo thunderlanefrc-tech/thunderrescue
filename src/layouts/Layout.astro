@@ -10,7 +10,7 @@ interface Props {
 const siteName = "Thunder Rescue";
 const siteUrl = "https://thunderrescue.com";
 const defaultTitle = "Thunder Rescue | Fundacja Ratownictwa Motocyklowego";
-const defaultDescription = "Thunder Rescue – fundacja ratownictwa motocyklowego. Zabezpieczenia medyczne, szkolenia z pierwszej pomocy, pomoc tam gdzie jest najbardziej potrzebna.";
+const defaultDescription = "Thunder Rescue – fundacja ratownictwa motocyklowego. Zabezpieczenia medyczne imprez masowych, szkolenia z pierwszej pomocy, ratownictwo motocyklowe.";
 const defaultImage = "/images/bg.jpg";
 
 const {
@@ -21,6 +21,31 @@ const {
 
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
 const imageUrl = new URL(image, siteUrl).href;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Thunder Rescue",
+  "alternateName": "Thunder Rescue Fundacja Ratownictwa Motocyklowego",
+  "description": defaultDescription,
+  "url": siteUrl,
+  "logo": `${siteUrl}/images/logo.png`,
+  "image": `${siteUrl}/images/bg.jpg`,
+  "telephone": "+48514680070",
+  "email": "kontakt@thunderrescue.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "PL"
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61591382394810",
+    "https://www.instagram.com/thunder.rescue/",
+    "https://www.tiktok.com/@thunder_rescue",
+    "https://x.com/Thunder_Rescue_",
+    "https://www.youtube.com/@Thunder_Rescue",
+    "https://patreon.com/ThunderRescue"
+  ]
+};
 ---
 
 <!doctype html>
@@ -33,20 +58,27 @@ const imageUrl = new URL(image, siteUrl).href;
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     <meta name="author" content="Thunder Rescue" />
-    <meta name="keywords" content="Thunder Rescue, fundacja ratownictwa motocyklowego, pierwsza pomoc, zabezpieczenie medyczne, ratownictwo" />
+    <meta name="keywords" content="Thunder Rescue, fundacja ratownictwa motocyklowego, ratownictwo motocyklowe, pierwsza pomoc, zabezpieczenie medyczne, imprezy masowe, szkolenia pierwsza pomoc" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
     <link rel="canonical" href={canonicalUrl} />
 
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <link rel="apple-touch-icon" href="/images/logo.png" />
 
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:site_name" content={siteName} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={imageUrl} />
-    <meta property="og:image:alt" content="Thunder Rescue" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Thunder Rescue – Fundacja Ratownictwa Motocyklowego" />
+    <meta property="og:locale" content="pl_PL" />
 
+    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@Thunder_Rescue_" />
     <meta name="twitter:creator" content="@Thunder_Rescue_" />
@@ -66,6 +98,7 @@ const imageUrl = new URL(image, siteUrl).href;
     <link rel="dns-prefetch" href="https://tiktok.com" />
     <link rel="dns-prefetch" href="https://x.com" />
     <link rel="dns-prefetch" href="https://youtube.com" />
+    <link rel="dns-prefetch" href="https://patreon.com" />
 
     <link rel="preload" href="/images/bg.jpg" as="image" fetchpriority="high" />
     <link rel="preload" href="/images/logo.png" as="image" fetchpriority="high" />
@@ -73,6 +106,9 @@ const imageUrl = new URL(image, siteUrl).href;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Structured data for Google -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body>
     <slot />
