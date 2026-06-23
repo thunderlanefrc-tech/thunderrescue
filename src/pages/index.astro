@@ -4,90 +4,87 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Thunder Rescue | Fundacja Ratownictwa Motocyklowego">
 
-  <!-- Fullscreen background image — slides up on intro -->
+  <!-- Fullscreen background — slides up on intro -->
   <div class="bg-layer" id="bg-layer" aria-hidden="true">
-    <img src="/images/background.png" alt="" class="bg-img" draggable="false" />
+    <img src="/images/bg.jpg" alt="" class="bg-img" draggable="false" />
   </div>
 
-  <!-- Dark overlay behind card -->
+  <!-- Dark overlay -->
   <div class="bg-overlay" id="bg-overlay" aria-hidden="true"></div>
 
   <!-- Main card — rises from below -->
   <div class="page-wrapper">
     <main class="card" id="main-card">
 
-      <!-- Logo -->
-      <div class="logo-wrapper reveal-item" id="logo-wrapper">
-        <div class="logo-ring" aria-hidden="true"></div>
-        <img src="/images/logo.png" alt="Thunder Rescue" class="logo-img" draggable="false" />
+      <!-- LEFT: logo + identity + bio -->
+      <div class="col-left">
+
+        <div class="logo-wrapper reveal-item">
+          <div class="logo-ring" aria-hidden="true"></div>
+          <img src="/images/logo.png" alt="Thunder Rescue" class="logo-img" draggable="false" />
+        </div>
+
+        <div class="identity reveal-item">
+          <h1 class="org-name">Thunder Rescue</h1>
+          <p class="org-tagline">Fundacja Ratownictwa Motocyklowego</p>
+        </div>
+
+        <p class="bio reveal-item">
+          Thunder Rescue to fundacja ratownictwa motocyklowego, której misją jest niesienie pomocy oraz promowanie bezpieczeństwa. Tworzymy zespół ludzi z pasją, którzy nieustannie rozwijają swoje umiejętności, aby skutecznie wspierać osoby potrzebujące pomocy.<span class="bio-p2"> Zajmujemy się zabezpieczeniami medycznymi imprez masowych, wydarzeń sportowych i kulturalnych oraz prowadzimy szkolenia z zakresu pierwszej pomocy. Działamy z zaangażowaniem, profesjonalizmem i gotowością do niesienia pomocy tam, gdzie jest ona najbardziej potrzebna.</span>
+        </p>
+
       </div>
 
-      <!-- Name & tagline -->
-      <div class="identity reveal-item">
-        <h1 class="org-name">Thunder Rescue</h1>
-        <p class="org-tagline">Fundacja Ratownictwa Motocyklowego</p>
+      <!-- RIGHT: social + contact -->
+      <div class="col-right">
+
+        <section class="social-section reveal-item">
+          <h2 class="section-label">Social Media</h2>
+          <div class="social-grid">
+
+            <a href="https://www.facebook.com/profile.php?id=61591382394810" target="_blank" rel="noopener noreferrer" class="link-card" aria-label="Facebook">
+              <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <span>Facebook</span>
+            </a>
+
+            <a href="https://www.instagram.com/thunder.rescue/" target="_blank" rel="noopener noreferrer" class="link-card" aria-label="Instagram">
+              <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span>Instagram</span>
+            </a>
+
+            <a href="https://www.tiktok.com/@thunder_rescue" target="_blank" rel="noopener noreferrer" class="link-card" aria-label="TikTok">
+              <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+              <span>TikTok</span>
+            </a>
+
+            <a href="https://x.com/Thunder_Rescue_" target="_blank" rel="noopener noreferrer" class="link-card" aria-label="Twitter / X">
+              <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              <span>Twitter / X</span>
+            </a>
+
+            <a href="https://www.youtube.com/@Thunder_Rescue" target="_blank" rel="noopener noreferrer" class="link-card link-card--wide" aria-label="YouTube">
+              <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <span>YouTube</span>
+            </a>
+
+          </div>
+        </section>
+
+        <section class="contact-section reveal-item">
+          <h2 class="section-label">Kontakt</h2>
+          <div class="contact-grid">
+            <a href="mailto:kontakt@thunderrescue.com" class="contact-card">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>kontakt@thunderrescue.com</span>
+            </a>
+            <a href="tel:+48514680070" class="contact-card">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+48 514 680 070</span>
+            </a>
+          </div>
+        </section>
+
       </div>
-
-      <!-- Description -->
-      <p class="bio reveal-item">
-        Thunder Rescue to fundacja ratownictwa motocyklowego, której misją jest niesienie pomocy oraz promowanie bezpieczeństwa. Tworzymy zespół ludzi z pasją, którzy nieustannie rozwijają swoje umiejętności, aby skutecznie wspierać osoby potrzebujące pomocy.
-        <br /><br />
-        Zajmujemy się zabezpieczeniami medycznymi imprez masowych, wydarzeń sportowych i kulturalnych oraz prowadzimy szkolenia z zakresu pierwszej pomocy. Działamy z zaangażowaniem, profesjonalizmem i gotowością do niesienia pomocy tam, gdzie jest ona najbardziej potrzebna.
-      </p>
-
-      <!-- Social media links -->
-      <section class="social-section reveal-item">
-        <h2 class="section-label">Social Media</h2>
-        <div class="social-grid">
-
-          <a href="https://www.facebook.com/profile.php?id=61591382394810" target="_blank" rel="noopener noreferrer" class="link-card" aria-label="Facebook">
-            <!-- Facebook -->
-            <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            <span>Facebook</span>
-          </a>
-
-          <a href="https://www.instagram.com/thunder.rescue/" target="_blank" rel="noopener noreferrer" class="link-card" aria-label="Instagram">
-            <!-- Instagram -->
-            <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            <span>Instagram</span>
-          </a>
-
-          <a href="https://www.tiktok.com/@thunder_rescue" target="_blank" rel="noopener noreferrer" class="link-card" aria-label="TikTok">
-            <!-- TikTok -->
-            <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
-            <span>TikTok</span>
-          </a>
-
-          <a href="https://x.com/Thunder_Rescue_" target="_blank" rel="noopener noreferrer" class="link-card" aria-label="Twitter / X">
-            <!-- X -->
-            <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            <span>Twitter / X</span>
-          </a>
-
-          <a href="https://www.youtube.com/@Thunder_Rescue" target="_blank" rel="noopener noreferrer" class="link-card link-card--wide" aria-label="YouTube">
-            <!-- YouTube -->
-            <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            <span>YouTube</span>
-          </a>
-
-        </div>
-      </section>
-
-      <!-- Contact boxes -->
-      <section class="contact-section reveal-item">
-        <h2 class="section-label">Kontakt</h2>
-        <div class="contact-grid">
-          <a href="mailto:kontakt@thunderrescue.com" class="contact-card">
-            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <span>kontakt@thunderrescue.com</span>
-          </a>
-          <a href="tel:+48514680070" class="contact-card">
-            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <span>+48 514 680 070</span>
-          </a>
-        </div>
-      </section>
-
     </main>
   </div>
 
@@ -95,6 +92,16 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
   /* ── Background layer ── */
+  :root {
+    --bg-shift: -18%;
+  }
+
+  @media (max-width: 767px) {
+    :root {
+      --bg-shift: -10%;
+    }
+  }
+
   .bg-layer {
     position: fixed;
     inset: 0;
@@ -105,14 +112,14 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .bg-layer.shifted {
-    transform: translateY(-18%);
+    transform: translateY(var(--bg-shift));
   }
 
   .bg-img {
     width: 100%;
-    height: 100%;
+    height: 120%; /* extra height so shifting up never shows empty space */
     object-fit: cover;
-    object-position: center;
+    object-position: center 40%;
     pointer-events: none;
     user-select: none;
   }
@@ -128,7 +135,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .bg-overlay.active {
-    background: rgba(5, 3, 12, 0.55);
+    background: rgba(5, 3, 12, 0.6);
   }
 
   /* ── Page wrapper ── */
@@ -140,31 +147,30 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 16px;
-    padding-top: max(40px, env(safe-area-inset-top, 40px));
-    padding-bottom: max(40px, env(safe-area-inset-bottom, 40px));
+    padding: 20px 16px;
+    padding-top: max(20px, env(safe-area-inset-top, 20px));
+    padding-bottom: max(20px, env(safe-area-inset-bottom, 20px));
   }
 
   /* ── Card ── */
   .card {
     width: 100%;
-    max-width: 520px;
-    padding: 44px 36px;
-    background: rgba(8, 4, 18, 0.78);
+    max-width: 540px;
+    padding: 36px 28px;
+    background: rgba(8, 4, 18, 0.82);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(220, 38, 38, 0.25);
+    border: 1px solid rgba(220, 38, 38, 0.22);
     border-radius: 28px;
     box-shadow:
-      0 0 60px rgba(220, 38, 38, 0.08),
+      0 0 60px rgba(220, 38, 38, 0.07),
       0 30px 60px -15px rgba(0, 0, 0, 0.7);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 0;
 
-    /* Intro: starts off-screen below */
+    /* Intro: card starts off-screen below */
     transform: translateY(110vh);
     opacity: 0;
     transition:
@@ -178,13 +184,22 @@ import Layout from '../layouts/Layout.astro';
     opacity: 1;
   }
 
+  .col-left,
+  .col-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   /* ── Logo ── */
   .logo-wrapper {
     position: relative;
-    margin-bottom: 28px;
-    width: 180px;
-    height: 180px;
+    margin-bottom: 22px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
+    flex-shrink: 0;
     animation: float 4s ease-in-out infinite;
   }
 
@@ -207,12 +222,12 @@ import Layout from '../layouts/Layout.astro';
     pointer-events: none;
     user-select: none;
     background: #0a0008;
-    box-shadow: 0 0 40px rgba(220, 38, 38, 0.3);
+    box-shadow: 0 0 36px rgba(220, 38, 38, 0.3);
   }
 
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-8px); }
   }
 
   @keyframes spin {
@@ -222,48 +237,48 @@ import Layout from '../layouts/Layout.astro';
 
   /* ── Identity ── */
   .identity {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   .org-name {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 800;
     letter-spacing: -0.02em;
     background: linear-gradient(135deg, #ef4444 0%, #dc2626 40%, #f87171 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     line-height: 1.1;
   }
 
   .org-tagline {
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 500;
     color: #94a3b8;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
   }
 
   /* ── Bio ── */
   .bio {
-    font-size: 14px;
-    line-height: 1.75;
+    font-size: 13px;
+    line-height: 1.7;
     color: #cbd5e1;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     text-align: center;
   }
 
   /* ── Section label ── */
   .section-label {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.18em;
     color: #64748b;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     position: relative;
     display: inline-block;
   }
@@ -271,24 +286,24 @@ import Layout from '../layouts/Layout.astro';
   .section-label::after {
     content: '';
     display: block;
-    width: 32px;
+    width: 28px;
     height: 2px;
     background: linear-gradient(90deg, #dc2626, #ef4444);
     border-radius: 1px;
-    margin-top: 6px;
-    box-shadow: 0 0 8px rgba(220, 38, 38, 0.5);
+    margin-top: 5px;
+    box-shadow: 0 0 6px rgba(220, 38, 38, 0.5);
   }
 
   /* ── Social section ── */
   .social-section {
     width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   .social-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 8px;
   }
 
   .link-card {
@@ -296,14 +311,14 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 14px 18px;
-    min-height: 52px;
+    gap: 8px;
+    padding: 12px 16px;
+    min-height: 48px;
     background: rgba(220, 38, 38, 0.07);
     border: 1px solid rgba(220, 38, 38, 0.18);
-    border-radius: 14px;
+    border-radius: 12px;
     color: white;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -324,15 +339,13 @@ import Layout from '../layouts/Layout.astro';
     pointer-events: none;
   }
 
-  .link-card:hover::before {
-    opacity: 1;
-  }
+  .link-card:hover::before { opacity: 1; }
 
   .link-card:hover {
     background: rgba(220, 38, 38, 0.16);
     border-color: rgba(220, 38, 38, 0.45);
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 12px 30px rgba(220, 38, 38, 0.18);
+    box-shadow: 0 10px 28px rgba(220, 38, 38, 0.18);
   }
 
   .link-card:active {
@@ -340,8 +353,8 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .link-icon {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     flex-shrink: 0;
     color: #f87171;
   }
@@ -354,7 +367,7 @@ import Layout from '../layouts/Layout.astro';
   .contact-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 8px;
   }
 
   .contact-card {
@@ -362,13 +375,13 @@ import Layout from '../layouts/Layout.astro';
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 18px 14px;
+    gap: 8px;
+    padding: 16px 10px;
     background: rgba(22, 163, 74, 0.12);
     border: 1px solid rgba(22, 163, 74, 0.3);
-    border-radius: 14px;
+    border-radius: 12px;
     color: #86efac;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -384,8 +397,8 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .contact-icon {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     color: #4ade80;
     flex-shrink: 0;
   }
@@ -393,7 +406,7 @@ import Layout from '../layouts/Layout.astro';
   /* ── Reveal animation ── */
   .reveal-item {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(18px);
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
 
@@ -402,27 +415,120 @@ import Layout from '../layouts/Layout.astro';
     transform: translateY(0);
   }
 
-  /* ── Mobile ── */
-  @media (max-width: 480px) {
+  /* ════════════════════════════════════════
+     DESKTOP — horizontal two-column layout
+     fits in one viewport height, no scroll
+  ════════════════════════════════════════ */
+  @media (min-width: 768px) {
     .page-wrapper {
-      padding: 24px 12px;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      padding: 24px;
     }
 
     .card {
-      padding: 32px 20px;
+      max-width: 920px;
+      padding: 44px 48px;
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: 1fr;
+      gap: 44px;
+      align-items: center;
+      text-align: left;
+      max-height: calc(100dvh - 48px);
+    }
+
+    .col-left {
+      align-items: flex-start;
+    }
+
+    .col-right {
+      align-items: flex-start;
+    }
+
+    .logo-wrapper {
+      width: 130px;
+      height: 130px;
+      margin-bottom: 20px;
+    }
+
+    .org-name {
+      font-size: 26px;
+    }
+
+    .bio {
+      font-size: 12.5px;
+      line-height: 1.65;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    /* On desktop hide the second sentence to keep it compact */
+    .bio-p2 {
+      display: none;
+    }
+
+    .section-label::after {
+      /* Left-align the underline bar */
+    }
+  }
+
+  /* ── Tablet ── */
+  @media (min-width: 768px) and (max-width: 900px) {
+    .card {
+      grid-template-columns: 240px 1fr;
+      gap: 28px;
+      padding: 32px 36px;
+    }
+
+    .logo-wrapper {
+      width: 110px;
+      height: 110px;
+    }
+
+    .org-name {
+      font-size: 22px;
+    }
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 767px) {
+    .bg-img {
+      object-position: center 55%;
+    }
+
+    .page-wrapper {
+      align-items: flex-start;
+      padding-top: max(32px, env(safe-area-inset-top, 32px));
+    }
+
+    .card {
+      max-width: 440px;
+      padding: 28px 20px;
       border-radius: 22px;
     }
 
     .logo-wrapper {
-      width: 150px;
-      height: 150px;
-      margin-bottom: 22px;
+      width: 130px;
+      height: 130px;
+      margin-bottom: 18px;
     }
 
     .org-name {
-      font-size: 28px;
+      font-size: 26px;
     }
 
+    .social-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .link-card--wide {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 400px) {
     .social-grid {
       grid-template-columns: 1fr;
     }
@@ -444,21 +550,21 @@ import Layout from '../layouts/Layout.astro';
     const card = document.getElementById('main-card');
     const revealItems = document.querySelectorAll('.reveal-item');
 
-    // Phase 1: show background for 600ms, then start slide
+    // Phase 1: background visible alone for 600ms
     setTimeout(() => {
       bgLayer?.classList.add('shifted');
       bgOverlay?.classList.add('active');
 
-      // Phase 2: card slides up from bottom (slight delay so it feels sequential)
+      // Phase 2: card rises from below
       setTimeout(() => {
         card?.classList.add('visible');
       }, 150);
 
-      // Phase 3: reveal items sequentially after card arrives
+      // Phase 3: elements appear sequentially after card lands
       revealItems.forEach((el, i) => {
         setTimeout(() => {
           el.classList.add('revealed');
-        }, 1100 + i * 220);
+        }, 1100 + i * 200);
       });
 
     }, 600);
